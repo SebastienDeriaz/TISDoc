@@ -1,4 +1,4 @@
-\section{applyLUT}
+\section{\texttt{applyLUT}}
 \begin{lstlisting}[style=docstringstyle]
 
     Applies LUT to an image
@@ -12,57 +12,102 @@
         new image
     
 \end{lstlisting}
-\section{computeCumulativeHisto}
+\section{\texttt{computeCumulativeHisto}}
 \begin{lstlisting}[style=docstringstyle]
 
     Computes cumulative histogram from base histrogram
     
-    Arguments:
+    Parameters:
+    -----------
         h : histogram
         
-    Return:
+    Returns:
+    --------
         cumulative histogram,
         cumulative normalized histogram
     
 \end{lstlisting}
-\section{find\_nearest}
-Pas de docstring
-\section{halfToning}
+\section{\texttt{find\_nearest}}
+\begin{lstlisting}[style=docstringstyle]
+
+    Finds element in array closest to specified value
+    
+    Parameters:
+    -----------
+    array : data
+    value : value to search for
+    
+    Returns:
+    --------
+    idx : element index
+    val : value
+    
+\end{lstlisting}
+\section{\texttt{halfToning}}
 \begin{lstlisting}[style=docstringstyle]
 
     Applies halftoning algorithm to f and returns the results as 2D array
     
-    Arguments:
+    Parameters:
+    ----------
         img : image
-    Return:
+    Returns:
+    -------
         h : new image
     
 \end{lstlisting}
-\section{imgLevelAdjust}
+\section{\texttt{imgLevelAdjust}}
 \begin{lstlisting}[style=docstringstyle]
 
     Adjusts image's contrast
-    Arguments:
+    Parameters:
+    -----------
         f     : image
         _mini : lower percentage limit (default 1)
         _maxi : higher percentage limit (default 99)
         
-    Return:
-        adjusted image
+    Returns:
+    --------
+        H : adjusted image
     
 \end{lstlisting}
-\section{showHistogram}
+\section{\texttt{showHistogram}}
 \begin{lstlisting}[style=docstringstyle]
-Displays histograms and its cumulative
-    n <------
-    Arguments
-    h : histogramme
+
+    Displays histograms and its cumulative
+    Parameters:
+    -----------
+    h : histogram
     
-    Return
+    Returns:
+    --------
     fig : figure
-    axs : axis
-    
+    axs : axis   
     
 \end{lstlisting}
-\section{showImage}
-Pas de docstring
+\section{\texttt{showImage}}
+\begin{lstlisting}[style=docstringstyle]
+
+    Displays an Image (grayscale or RGB)
+    
+    Parameters:
+    -----------
+    Image        : Image array (HxW or HxWx3)
+    width        : Displayed image width (default 10)
+    showGrid     : display grid (default true)
+    HLines       : array of vertical positions to highlight pixels
+    VLines       : array of horizontal positions to highlight pixels
+    w_label_step : width labels step
+    h_label_step : height label step
+    grid_step    : grid step
+    title        : figure title (default none)
+    colorMap     : colormap to apply (default gray when grey scale, ignored when RGB)
+    Max          : pixel max (default to 255 or 1 depending of data)
+    Min          : pixel min (default 0)
+    saveto       : path to save figure
+    
+    Returns:
+    --------
+    figure, ax (matplotlib)
+    
+\end{lstlisting}
